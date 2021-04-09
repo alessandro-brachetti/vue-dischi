@@ -11,7 +11,19 @@
 
 <body>
   <div id="root">
-    <div class="card-wrapper" v-for="disk in disks">
+    <div class="menu-wrapper">
+      <div class="genre-menu">
+        <label class="genre-menu-text" for="genres">Choose a genre:</label>
+        <select name="genre" id="genre-menu-dropdown" v-model="genre">
+          <option value="">All</option>
+          <option v-for="genre in genres" :value="genre"> {{ genre }} </option>
+        </select>
+      </div>
+      <div class="year-sorted">
+        <span>SORT BY YEAR</span> <button type="button" name="button" @click="sorted">SORT</button>
+      </div>
+    </div>
+    <div class="card-wrapper" v-for="disk in filteredDisks">
       <div class="card-image" :style="`background-image: url('${disk.poster}');`">
 
       </div>

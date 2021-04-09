@@ -5,13 +5,37 @@
 }
 #root {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-content: flex-start;
   flex-wrap: wrap;
 
   height: 100vh;
   width: 100vw;
   background-color: #808080;
+}
+.menu-wrapper {
+  width: 100%;
+}
+.genre-menu {
+  margin: 20px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  display: inline-block;
+}
+#genre-menu-dropdown {
+  width: 100px;
+}
+.year-sorted {
+  display: inline-block;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+.year-sorted button {
+  margin-left: 10px;
+  padding: 5px 15px;
+  border-radius: 10px;
 }
 .card-wrapper {
   width: calc(100vw/5 - 40px);
