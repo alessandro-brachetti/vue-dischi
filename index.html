@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue Dischi</title>
+
+  <link rel="stylesheet" href="master.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="card-wrapper" v-for="disk in disks">
+      <div class="card-image" :style="`background-image: url('${disk.poster}');`">
+
+      </div>
+      <div class="overlay">
+        <div class="card-info">
+          <h3 class="title">"{{ disk.title }}"</h3> <span class="year">({{disk.year}})</span>
+          <p class="author">{{ disk.author }}</p>
+          <p class="genre">~ {{ disk.genre }} ~</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="main.js" charset="utf-8"></script>
+</body>
+</html>
